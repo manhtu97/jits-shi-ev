@@ -1,0 +1,9 @@
+/* .ant-table-thead > tr > th {
+  background: #989696;
+} */
+.responsive {
+  padding: 5px;
+}
+.table-row-error {
+  background-color: #ff000026;
+}

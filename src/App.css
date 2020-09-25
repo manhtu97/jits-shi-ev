@@ -1,38 +1,66 @@
 .App {
   text-align: center;
+  height: 100%;
+  overflow: auto;
+}
+.ant-card-meta-title {
+  white-space: normal !important;
+}
+.ant-card {
+  height: 100%;
+}
+.ant-layout-sider {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.trigger:hover {
+  color: #1890ff;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.site-layout .site-layout-background {
+  background: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ant-layout-header {
+  height: 50px !important;
+  line-height: 44px !important;
+  border-bottom: 1px solid #e4dfdf;
+  padding: 3px 0 !important;
 }
-
-.App-link {
-  color: #61dafb;
+.nameUser {
+  padding-right: 10px;
+  border-left: 1px solid #e4dfdf;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-popover-inner-content {
+  padding: 0px !important;
+}
+.buttonClick {
+  padding: 6px 8px;
+}
+.buttonClick:hover {
+  background-color: #dbdbde;
+  cursor: pointer;
+}
+.ant-layout-sider-trigger {
+  display: none;
+}
+.ant-layout-content {
+  padding: 24px;
+}
+.home {
+  padding-bottom: 24px;
+}
+.rowNotMargin {
+  margin: 0px !important;
 }
