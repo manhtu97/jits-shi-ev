@@ -198,22 +198,6 @@ class WarningSetting extends Component {
             </Row>
           </Col>
         </Row>
-        {/* <Row gutter={[8, 8]} style={{ padding: "16px 0" }}>
-          <Breadcrumb style={{ paddingLeft: "6px", color: "#0000FF" }}>
-            <Breadcrumb.Item>
-              <Link to="/home">ホームページ</Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <Link to="/office">事業所</Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <Link to="/office/1">田布施</Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <Text strong>警報設定</Text>
-            </Breadcrumb.Item>
-          </Breadcrumb>
-        </Row> */}
         <Card style={{ width: "100%" }}>
           <Row style={{ padding: "16px" }} align="middle" justify="start">
             <Col lg={{ span: 2 }} xs={{ span: 2 }}>

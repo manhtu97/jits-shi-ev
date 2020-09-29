@@ -18,6 +18,7 @@ import ReportHistoryOffice from "@src/component/StepComponent/Office/DetailOffic
 import EditPermission from "@src/component/StepComponent/PermissionSetting/EditPermisstion";
 import WarningSetting from "@src/component/StepComponent/Office/DetailOffice/WarningSetting";
 import DetailOfficeSetting from "@src/component/StepComponent/Office/DetailOffice/DetailOfficeSetting";
+import FileSetting from "@src/component/StepComponent/FileSetting/FileManagement";
 function RouterRoot() {
   return (
     <Switch>
@@ -60,6 +61,7 @@ function RouterRoot() {
         component={ScreenConfigSetting}
       />
       <Route exact path="/user" component={User} />
+      <Route exact path="/file" component={FileSetting} />
       <Route path="**">
         <Redirect to="/404" />
       </Route>

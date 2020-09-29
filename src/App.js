@@ -20,7 +20,7 @@ function App() {
   const history = useHistory();
   useEffect(() => {
     history.push("/detail-office/dashboard/1");
-  });
+  }, [history]);
   let content = () => (
     <div>
       <div className="buttonClick">

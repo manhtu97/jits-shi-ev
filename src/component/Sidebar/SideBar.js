@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Layout, Menu } from "antd";
 import {
   UserOutlined,
@@ -17,8 +17,10 @@ import {
   HistoryOutlined,
   FileOutlined,
 } from "@ant-design/icons";
-import { connect } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { connect, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+
+import { selectTab } from "@src/redux";
 const { SubMenu } = Menu;
 const { Sider } = Layout;
 const mapStateToProps = (state) => {
@@ -27,13 +29,14 @@ const mapStateToProps = (state) => {
   };
 };
 function SideBar(props) {
-  const history = useHistory();
-  useEffect(() => {
-    console.log(props)
-    history.push("/detail-office/dashboard/1");
-  });
+  const dispatch = useDispatch();
   const toggle = () => {
     return !props.collapsed;
+  };
+  const clickMenu = (item) => {
+    let arrayChild = item.keyPath.shift();
+    let arrayParent = item.keyPath;
+    dispatch(selectTab(arrayParent,arrayChild));
   };
   return (
     <Sider
@@ -50,6 +53,7 @@ function SideBar(props) {
         style={{ borderRight: 0 }}
         defaultSelectedKeys={props.tabChild}
         defaultOpenKeys={[props.tabParent]}
+        onClick={clickMenu}
       >
         <SubMenu key="detailOffice" icon={<HomeOutlined />} title="事業所">
           <Menu.Item key="dashboard" icon={<FundOutlined />}>
@@ -105,7 +109,7 @@ function SideBar(props) {
             <Link to="/camera-setting">カメラ設定</Link>
           </Menu.Item>
           <Menu.Item key="fileSetting" icon={<FileOutlined />}>
-            ファイル管理
+            <Link to="/file">ファイル管理</Link>
           </Menu.Item>
         </SubMenu>
       </Menu>
